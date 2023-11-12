@@ -176,7 +176,7 @@ body{
 .container.active .toggle{
     transform: translateX(50%);
 }       
-    
+
 .toggle-panel{
     position: absolute;
     width: 50%;
@@ -207,4 +207,8 @@ body{
 
 .container.active .toggle-right{
     transform: translateX(200%);
+}
+
+input[type="date"]{
+    color: gray;
 }

@@ -1,0 +1,84 @@
+{
+  "$schema": "https://github.com/Azure/data-api-builder/releases/download/v0.8.52/dab.draft.schema.json",
+  "data-source": {
+    "database-type": "postgresql",
+    "connection-string": "Server=dbarcane.postgres.database.azure.com;Database=postgres;Port=5432;User Id=apple;Password=apqazxsw110197%;Ssl Mode=Require;trustservercertificate=true;",
+    "options": {}
+    
+  },
+  "runtime": {
+    "rest": {
+      "enabled": true,
+      "path": "/api"
+    },
+    "graphql": {
+      "enabled": true,
+      "path": "/graphql",
+      "allow-introspection": true
+    },
+    "host": {
+      "cors": {
+        "origins": [],
+        "allow-credentials": false
+      },
+      "authentication": {
+        "provider": "StaticWebApps"
+      },
+      "mode": "development"
+    }
+  },
+  "entities": {
+    "user": {
+      "source": {
+        "object": "public.user",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "user",
+          "plural": "users"
+        }
+      },
+      "path": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "apple",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    },
+    "horoscope": {
+      "source": {
+        "object": "public.horoscope",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "horoscope",
+          "plural": "horoscopes"
+        }
+      },
+      "path": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "apple",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
