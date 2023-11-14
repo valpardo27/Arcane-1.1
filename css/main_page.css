@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #DFCCFB;
+    background: linear-gradient(to right, #e2e2e2, #DFCCFB);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    position: absolute;
+    overflow: hidden;
+    width: 768px;   
+    max-width: 100%;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container div {
+    background-color: white;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 31vh;
+    max-width: 300px;
+    height: 56vh;
+    max-height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 12.5px 20px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.container div:last-child {
+    margin-right: 0;
+}
+  
+.container button{
+    background-color: #BEADFA;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 35px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    height: 35px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container button:hover{
+    background-color: #D0BFFF;
+    border-color: #fff;
+}
+
+.container span{
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.container h3{
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 10px 0;
+    margin-left: auto;
+    margin-right: auto;
+    color: #BEADFA;
+}
