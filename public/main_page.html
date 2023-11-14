@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="/css/main_page.css">
     <title>Arcane Main Page | Tarot</title>
 </head>
@@ -10,20 +11,43 @@
     
     <div class="container" id="container">
 
-        <div class="info-container">
+        <div class="info-container" id="expandable-container-chat">
             <span>Una llave es como una ventana abierta hacia el conocimiento personal.</span>
-            <button>Chat</button>
+            <button onclick="expandChatContainer()">Chat</button>
         </div>
-        <div class="info-container">
+        <div class="info-container" >
             <h3>Nombre</h3>
             <span>2000-01-01</span>
             <span>Signo</span>
         </div>
-        <div class="info-container">
+        <div class="info-container" id="expandable-container-horoscope">
             <span>Los astros han hablando Animate a descubrir que te espera en salud, amor y dinero.</span>
-            <button>Horoscopo</button>
+            <button onclick="expandHoroscopeContainer()">Horoscopo</button>
         </div>
-        
+        <div class="chat-container" id="Chat">
+            <div class="button-container">
+                <button onclick="hideContainer()"><i class="fa-solid fa-arrow-left" style="color: #fff;"></i></button>
+
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="horoscope-container" id="Horoscope">
+            <div class="button-container">
+                <button onclick="hideContainer()"><i class="fa-solid fa-arrow-left" style="color: #fff;"></i></button>
+                
+                <div class="horoscope-info">
+                    <h2>Signo</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad quidem odit ab libero iure cumque, alias a fugit culpa suscipit exercitationem autem pariatur amet eius deleniti consequatur mollitia repellendus nesciunt? 
+                    <br>
+                    <br>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia dolorum ipsum quae libero autem est itaque aut deserunt, dolore laboriosam consectetur nihil, aliquid pariatur! Cumque qui voluptates ad quod excepturi!</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="/src/main_page.js"></script>
 </body>
 </html>

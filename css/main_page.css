@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -26,7 +28,7 @@ body{
     justify-content: center;
 }
 
-.container div {
+.container .info-container {
     background-color: white;
     background-size: auto 100%;
     background-repeat: no-repeat;
@@ -44,7 +46,7 @@ body{
     align-content: center;
 }
 
-.container div:last-child {
+.container .info-container:last-child {
     margin-right: 0;
 }
   
@@ -91,3 +93,173 @@ body{
     margin-right: auto;
     color: #BEADFA;
 }
+
+.container .chat-container {
+    display: none;
+}
+
+.container .horoscope-container {
+    display: none;
+}
+
+.container .info-container {
+    background-color: white;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 31vh;
+    max-width: 300px;
+    height: 56vh;
+    max-height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 12.5px 20px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.container .chat-container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 90%;
+    min-height: 480px;
+    animation: expandAnimation 0.5s ease-out;
+}
+
+.container .horoscope-container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 90%;
+    min-height: 480px;
+    animation: expandAnimation 0.5s ease-out;
+}
+
+@keyframes expandAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.container .chat-container.hide,
+.container .horoscope-container.hide {
+    animation: collapseAnimation 0.5s ease-in;
+}
+
+@keyframes collapseAnimation {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.container .info-container.expanded {
+    display: none;
+}
+
+.container .info-container.expanded + .chat-container {
+    display: block;
+}
+
+.container .info-container.expanded + .horoscope-container {
+    display: block;
+}
+
+.container .info-container:not(.expanded) {
+    width: 31vh; /* Tamaño original de los contenedores */
+}
+
+.chat-container{
+    margin: 20px 0;
+    margin-right: 10px;
+}
+
+.chat-container a{
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.horoscope-container{
+    margin: 20px 0;
+    margin-right: 10px;
+}
+
+.horoscope-container a{
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 10px;
+    /* height: 35px; */
+    width: 100%;
+} 
+
+.button-container button{
+    margin-left: 35px;
+    height: 25px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horoscope-container .horoscope-info{
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 40px;
+}
+
+.horoscope-info h2{
+    color: #BEADFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+}
+
+.horoscope-info p{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 10px 20px;
+    text-align: justify;
+}
+    
