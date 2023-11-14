@@ -209,6 +209,6 @@ body{
     transform: translateX(200%);
 }
 
-input[type="date"]{
+input:empty[type="date"]{
     color: gray;
 }
