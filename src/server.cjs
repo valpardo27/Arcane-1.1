@@ -1,6 +1,6 @@
-import express from 'express';
+// import express from 'express';
 
-// const express = require('express');
+const express = require('express');
 const { Client } = require('pg');
 const fs = require('fs');
 
@@ -13,7 +13,7 @@ const client = new Client({
     password:"apqazxsw110197%", 
     database:"postgres", 
     port:5432, 
-    ssl:{ca:fs.readFileSync(path.resolve(__dirname, 'BaltimoreCyberTrustRoot.crt.pem'))}
+    ssl:{ca:fs.readFileSync('src/DigiCertGlobalRootG2.crt.pem')}
 });
 
 
